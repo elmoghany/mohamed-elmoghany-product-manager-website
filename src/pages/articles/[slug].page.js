@@ -60,10 +60,11 @@ export const getStaticProps = async ({ params }) => {
 };
 
 export const getStaticPaths = async () => {
-  const paths = postFilePaths
-    .map(filePath => filePath.replace(/\.mdx?$/, ''))
-    .map(slug => ({ params: { slug } }));
+  //  const paths = postFilePaths
+  //    .map(filePath => filePath.replace(/\.mdx?$/, ''))
+  //    .map(slug => ({ params: { slug } }));
 
+  const paths = [];
   return {
     paths,
     fallback: false,
