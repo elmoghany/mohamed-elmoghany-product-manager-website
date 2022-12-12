@@ -11,10 +11,10 @@ const window = new JSDOM('').window;
 const DOMPurify = createDOMPurify(window);
 
 const ses = new aws.SES({
-  region: 'us-east-1',
+  region: 'us-west-1',
 });
 
-const ORIGINS = ['https://hamishw.com', 'https://www.hamishw.com'];
+const ORIGINS = ['http://elmoghany.com', 'http://www.elmoghany.com'];
 const MAX_EMAIL_LENGTH = 512;
 const MAX_MESSAGE_LENGTH = 4096;
 const EMAIL = 'elmoghany@live.com';

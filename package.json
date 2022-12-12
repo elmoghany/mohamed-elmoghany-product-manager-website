@@ -1,10 +1,10 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
-  "homepage": "https://hamishw.com",
-  "description": "Portfolio site for Hamish Williams",
-  "repository": "https://github.com/HamishMW/portfolio.git",
-  "author": "Hamish Williams <hello@hamishw.com>",
+  "homepage": "http://www.elmoghany.com",
+  "description": "Product Manager Portfolio site for Mohamed Elmoghany",
+  "repository": "https://github.com/elmoghany/mohamed-elmoghany-product-manager-website.git",
+  "author": "Mohamed Elmoghany <pm@elmoghany.com>",
   "devDependencies": {
     "@mapbox/rehype-prism": "^0.8.0",
     "@storybook/addon-a11y": "^6.5.10",
@@ -37,6 +37,8 @@
     "stylelint-config-standard": "^26.0.0"
   },
   "dependencies": {
+    "aws": "^0.0.3-2",
+    "aws-cli": "^0.0.2",
     "fathom-client": "^3.5.0",
     "framer-motion": "^7.1.0",
     "mdx-bundler": "^9.0.1",
