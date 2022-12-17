@@ -1,0 +1,23 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-elmoghanywebsite-dev-212332-authRole",
+      "UnauthRoleArn": "arn:aws:iam::523279530567:role/amplify-elmoghanywebsite-dev-212332-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::523279530567:role/amplify-elmoghanywebsite-dev-212332-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-elmoghanywebsite-dev-212332-deployment",
+      "UnauthRoleName": "amplify-elmoghanywebsite-dev-212332-unauthRole",
+      "StackName": "amplify-elmoghanywebsite-dev-212332",
+      "StackId": "arn:aws:cloudformation:us-east-1:523279530567:stack/amplify-elmoghanywebsite-dev-212332/cc9d0fc0-7d59-11ed-8bc2-1218fdae6797",
+      "AmplifyAppId": "d1vdzj0xv2w56w"
+    },
+    "categories": {
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d1vdzj0xv2w56w",
+          "type": "manual"
+        }
+      }
+    }
+  }
+}

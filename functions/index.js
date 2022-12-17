@@ -11,7 +11,7 @@ const window = new JSDOM('').window;
 const DOMPurify = createDOMPurify(window);
 
 const ses = new aws.SES({
-  region: 'us-west-1',
+  region: 'us-east-1',
 });
 
 const ORIGINS = ['http://elmoghany.com', 'http://www.elmoghany.com'];
@@ -26,11 +26,11 @@ app.use(express.json());
 app.use(
   cors({
     origin: (origin, callback) => {
-      if (!ORIGINS.includes(origin)) {
-        return callback(
-          new Error(`Not allowed by CORS. Origin must be: ${ORIGINS.join(' or ')}`)
-        );
-      }
+      // if (!ORIGINS.includes(origin)) {
+      //   return callback(
+      //     new Error(`Not allowed by CORS. Origin must be: ${ORIGINS.join(' or ')}`)
+      //   );
+      // }
 
       return callback(null, true);
     },
@@ -40,8 +40,10 @@ app.options('*', cors());
 
 app.post('/message', async (req, res) => {
   try {
-    const email = DOMPurify.sanitize(req.body.email);
-    const message = DOMPurify.sanitize(req.body.message);
+
+    const requestBody = JSON.parse(req?.apiGateway?.event?.body);
+    const email = DOMPurify.sanitize(requestBody?.email);
+    const message = DOMPurify.sanitize(requestBody?.message);
 
     // Validate email request
     if (!email || !EMAIL_PATTERN.test(email)) {
