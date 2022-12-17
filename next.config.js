@@ -3,6 +3,8 @@ module.exports = {
   trailingSlash: true,
   pageExtensions: ['page.js', 'api.js'],
   webpack(config, { isServer }) {
+    config.resolve.fallback = { fs: false };
+
     // Run custom scripts
     if (isServer) {
       require('./scripts/generate-sitemap');
